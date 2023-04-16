@@ -29,14 +29,14 @@ function minesweeper(matrix) {
     new_arr.push([]);
     for (let col = 0, width = matrix[row].length - 1; col <= width; col++) {
       new_arr[row].push(
-        1 * (row > 0 && col > 0 && matrix[row - 1][col - 1]) +
-          1 * (row > 0 && matrix[row - 1][col]) +
-          1 * (row > 0 && col < width && matrix[row - 1][col + 1]) +
-          1 * (col > 0 && matrix[row][col - 1]) +
-          1 * (col < width && matrix[row][col + 1]) +
-          1 * (row < height && col > 0 && matrix[row + 1][col - 1]) +
-          1 * (row < height && matrix[row + 1][col]) +
-          1 * (row < height && col < width && matrix[row + 1][col + 1])
+        (row > 0 && col > 0 && matrix[row - 1][col - 1]) +
+          (row > 0 && matrix[row - 1][col]) +
+          (row > 0 && col < width && matrix[row - 1][col + 1]) +
+          (col > 0 && matrix[row][col - 1]) +
+          (col < width && matrix[row][col + 1]) +
+          (row < height && col > 0 && matrix[row + 1][col - 1]) +
+          (row < height && matrix[row + 1][col]) +
+          (row < height && col < width && matrix[row + 1][col + 1])
       );
     }
   }
