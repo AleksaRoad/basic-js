@@ -49,10 +49,8 @@ class VigenereCipheringMachine {
     "Z",
   ];
 
-  constructor(value) {
-    if ((value = true)) {
-      this.value = value;
-    }
+  constructor(value = true) {
+    this.value = value;
   }
 
   encrypt(message, key) {
